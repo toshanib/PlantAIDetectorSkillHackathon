@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+.dashboard {
+  padding: 30px;
+  background: linear-gradient(135deg, #eef7f1, #f9fbff);
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+.heroSub {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.leftPanel, .rightPanel {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.placeholder {
+  text-align: center;
+  color: #6c757d;
+  margin-top: 100px;
+}
+
+@media (max-width: 900px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.modernApp {
+  background: linear-gradient(135deg, #eef6f0, #f4f7fb);
+  min-height: 100vh;
+}
+
+.heroSection {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+.uploadPanel,
+.resultPanel {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  min-height: 450px;
+}
+
+.systemReady {
+  text-align: center;
+  margin-top: 120px;
+  color: #9ca3af;
+}
+
+@media (max-width: 900px) {
+  .dashboardLayout {
+    grid-template-columns: 1fr;
+  }
+}

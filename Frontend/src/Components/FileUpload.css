@@ -1,0 +1,224 @@
+.wrapper {
+	display: flex;
+	margin-top: 5%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border: 2px dashed #d6e5dc;
+}
+
+.imageHolder {
+  border: 2px dashed #4caf50;
+  background: #f4fbf6;
+  border-radius: 18px;
+  height: 350px;
+  width: 100%;
+}
+
+.buttonContainer button {
+  background: #1b5e20;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.buttonContainer button:hover {
+  background: #2e7d32;
+  transform: translateY(-2px);
+}
+.wrapper img {
+	display: none;
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#imagespan {
+	font-size: 1.8rem;
+	color: #2e7d32;
+}
+
+.buttonContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+
+.predictBtn {
+  background: #ff9800 !important;
+}
+
+.cameraVideo {
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.captureBtn {
+  background: #d32f2f;
+  margin-top: 10px;
+}
+/* Wrapper to allow overlay */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Scanner overlay on top of image */
+.scannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* allows clicks through */
+  display: none; /* hidden until image loads */
+}
+
+/* Show scanner only when image is visible */
+.wrapper img[style*="block"] + .scannerOverlay,
+.imageWrapper:hover .scannerOverlay {
+  display: block;
+}
+
+/* Main scanning line (SLOWER + smoother) */
+.scannerLine {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00ff88,
+    #22c55e,
+    #00ff88,
+    transparent
+  );
+  box-shadow: 0 0 20px #22c55e;
+  animation: slowScan 4s linear infinite; /* SLOWER (was 2s) */
+}
+
+/* Glow scanning area */
+.scannerGlow {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(34, 197, 94, 0.25),
+    rgba(34, 197, 94, 0.05),
+    transparent
+  );
+  animation: slowScan 4s linear infinite; /* match speed */
+}
+
+/* Smooth vertical scanning animation */
+@keyframes slowScan {
+  0% {
+    top: 0%;
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.9;
+  }
+}
+
+.scannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: none;
+}
+
+.activeScan {
+  display: block;
+}
+
+.scannerLine {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #00ff9c;
+  box-shadow: 0 0 10px #00ff9c;
+  animation: scanMove 4s linear infinite;
+}
+
+@keyframes scanMove {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+/* Image wrapper must be relative for overlay to work */
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Scanner overlay (on top of image) */
+.scannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Only animate when predicting */
+.activeScan .scannerLine {
+  animation: scanMove 4s linear infinite;
+}
+
+/* The scanning line */
+.scannerLine {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00ff9c, transparent);
+  box-shadow: 0 0 12px #00ff9c;
+  top: 0;
+}
+
+/* Soft glow effect */
+.scannerGlow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0,255,156,0.08), transparent 70%);
+}
+
+/* Slower smooth scan */
+@keyframes scanMove {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}

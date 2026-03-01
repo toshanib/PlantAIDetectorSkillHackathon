@@ -1,0 +1,56 @@
+.scanContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.scanCard {
+  width: 90%;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: 20px;
+  padding: 25px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.scanTitle {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.scannerBox {
+  position: relative;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #020617;
+  border: 2px solid #22c55e;
+}
+
+.scanLine {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #22c55e;
+  animation: scanMove 2s linear infinite;
+}
+
+.scanGrid {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#22c55e22 1px, transparent 1px),
+                    linear-gradient(90deg, #22c55e22 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@keyframes scanMove {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.scanText {
+  margin-top: 15px;
+  font-size: 1rem;
+  opacity: 0.9;
+}

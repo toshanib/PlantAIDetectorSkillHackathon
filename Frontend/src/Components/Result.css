@@ -1,0 +1,82 @@
+.resultContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.diagnosisCard {
+  width: 95%;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mainDiagnosis {
+  font-size: 2.5rem;
+  color: #166534;
+  margin-bottom: 20px;
+}
+
+.diseaseName {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #065f46;
+}
+
+.confidenceText {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.confidenceBar {
+  width: 80%;
+  height: 15px;
+  background: #d1fae5;
+  border-radius: 10px;
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+.confidenceFill {
+  height: 100%;
+  background: linear-gradient(90deg, #16a34a, #4ade80);
+}
+
+.treatmentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.treatmentBox {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.treatmentIcon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.pdfButton {
+  margin-top: 30px;
+  background: #166534;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pdfButton:hover {
+  background: #15803d;
+  transform: scale(1.05);
+}
